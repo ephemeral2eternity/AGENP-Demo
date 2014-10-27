@@ -55,7 +55,7 @@ app.controller('DashController', function($scope){
 	    context,
 	    videoSeries = [],
 	    audioSeries = [],
-	    maxGraphPoints = 50;
+	    maxGraphPoints = 200;
 
 
 	/////////////////////////////////////////////
