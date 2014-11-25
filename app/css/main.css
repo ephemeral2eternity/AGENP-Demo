@@ -158,6 +158,24 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #header .fl_left p{
         margin-top:5px;
         }
+
+/* ----------------------------------------------BreadCrumb-------------------------------------*/
+
+#breadcrumb{
+        padding:30px 0;
+        border-top:1px dotted #666;
+        border-bottom:1px dotted #666;
+        }
+
+#breadcrumb ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        }
+
+#breadcrumb ul li{display:inline;}
+#breadcrumb ul li.current a{text-decoration:underline;}
+
 /* ----------------------------------------------Content-------------------------------------*/
 
 #container{
