@@ -176,6 +176,46 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #breadcrumb ul li{display:inline;}
 #breadcrumb ul li.current a{text-decoration:underline;}
 
+/* ----------------------------------------------Gallery-------------------------------------*/
+
+.gallery{
+    padding:20px 0 30px 0;
+    }
+
+.wra
+    line-height:normal;pper .gallery h2{
+    display:block;
+    text-align:center;
+    margin:0 0 20px 0;
+    padding:0;
+    color:#432F21;
+    background-color:#000000;
+    font-size:56px;
+    text-transform:uppercase;
+    }
+
+.gallery ul{
+    display:inline;
+    margin:0;
+    padding:0;
+    list-style:none;
+    }
+
+.gallery ul li{
+    display:block;
+    float:left;
+    margin:0 10px 10px 0;
+    }
+
+.gallery ul li img{
+    width:174px;
+    height:174px;
+    padding:4px;
+    border:1px solid #432F21;
+    }
+
+.gallery ul li.last{margin-right:0;}
+
 /* ----------------------------------------------Content-------------------------------------*/
 
 #container{
