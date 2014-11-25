@@ -96,7 +96,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col2{padding:20px 0;}
 .col3{}
 .col4{}
-.col5, .col5 a{color:#DFDED4; background-color:#432F21;}
+.col5, .col5 a{color:#432F21; background-color:#DFDED4;}
 
 .panel {
     width:28%;
