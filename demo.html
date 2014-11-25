@@ -48,8 +48,8 @@
       <ul>
         <li class="last"><a href="about.html">About</a><span>Progress of AGENS Project</span></li>
         <li><a href="gallery.html">Video</a><span>Available Videos</span></li>
-        <li><a href="demo.html">Demo</a><span>A Video Player Demo</span></li>
-        <li class="active"><a href="index.html">Homepage</a><span>Project Description</span></li>
+        <li class="active"><a href="demo.html">Demo</a><span>A Video Player Demo</span></li>
+        <li><a href="index.html">Homepage</a><span>Project Description</span></li>
       </ul>
     </div>
     <div class="fl_left">
@@ -60,10 +60,41 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<div class="wrapper col4">
-  <div id="container">
-	<h1>AGENS Overview</h1>
-        <p>In commercial Video-on-Demand (VoD) systems, provisioning thousands of cache servers to serve millions of users with an expanding collection of movies is very common. As the system scales up, system management and control become great challenges. In this project, we propose AGENS --- an AGENt based management and control System for large-scale VoD.  AGENS performs management and control in a large number of processes distributed all over the VoD system, referred to as agents. It inherently overcomes the difficulty of scalability via massive distributed agents. It also specializes agents to handle different types of tasks such as Quality of Experience (QoE) driven control and system management. Specifically, AGENS includes system management and control following aspects: </p>
+<div class="wrapper col3">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="#">DEMO</a></li>
+      <li>&#187;</li>
+    </ul>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div class="row">
+        <p class="fl_left">The Demo page is still under construction .... This is not a final version</p>
+	<div class = "dash-video-player">
+		<video id = "videoPlayer" controls="true"></video>
+	       <div class="panel">
+			<div class="panel-heading panel-top">
+				<span class="panel-title">Video Statistics</span>
+			</div>
+			<div class="panel-body panel-stats">
+				<p class="text-primary">Video Bitrate Level: <span class="text-success">{{videoIndex}}/{{videoMaxIndex}}</span></p>
+				<p class="text-primary">Video Bitrates: <span class="text-success">{{videoBitrate}} kbps / {{videoMaxBitrate}} kbps</span></p>
+				<p class="text-primary">Buffer Length: <span class="text-success">{{videoBufferLength}}</span></p>
+				<p class="text-primary">Latency: <span class="text-success">last {{videoRatioCount}} segments</span></p>
+				<p class="text-success" title="[low] < [average] < [high]">{{videoLatency}}</p>
+				<p class="text-primary">QoE: <span class="text-success">{{QoE}}</span></p>
+			</div>
+		</div>
+	</div>	
+  </div>
+  <div class="row2">
+	<div class="panel-body panel-stats">
+		<chart ng-model="bufferData"></chart>
+	</div>
   </div>
 </div>
 <!-- ####################################################################################################### -->

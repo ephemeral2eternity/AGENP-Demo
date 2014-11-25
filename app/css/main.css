@@ -30,7 +30,7 @@ body{
         padding:0;
         color:#432F21;
         background-color:#DFDED4;
-        font-size:12px;
+        font-size:14px;
         font-family:Georgia, "Times New Roman", Times, serif;
         }
 
@@ -45,7 +45,7 @@ br.clear{clear:both; margin-top:-15px;}
 
 a{outline:none; text-decoration:none; color:#990000; background-color:#CDCAB9;}
 
-.fl_left{float:left;}
+.fl_left{float:left;margin-left:2%}
 .fl_right{float:right;}
 
 .imgl, .imgr{border:1px solid #C7C5C8; padding:5px;}
