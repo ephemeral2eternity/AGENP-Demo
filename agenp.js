@@ -315,7 +315,7 @@ app.controller('DashController', function($scope){
 	player.attachView(video);
 	player.setAutoPlay(true);
 
-	var url = "./BBB/stream.mpd";
+	var url = "./st/stream.mpd";
 	player.attachSource(url);
 
 	/////////////////////////////////////////////
