@@ -1,4 +1,5 @@
 @import url(navi.css);
+@import url(image.css);
 /* @import url(tables.css); */ /* This one conflicts with chart styles*/
 @import url(forms.css);
 
@@ -32,7 +33,7 @@ body{
         padding:0;
         color:#432F21;
         background-color:#DFDED4;
-        font-size:14px;
+        font-size:16px;
         font-family:Georgia, "Times New Roman", Times, serif;
         }
 
@@ -97,7 +98,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col1 a{color:#990000; background-color:#DFDED4;}
 .col2{padding:20px 0;}
 .col3{}
-.col4{}
+.col4{margin-left: 40px;text-align:justify;}
 .col5, .col5 a{color:#432F21; background-color:#DFDED4;}
 
 .panel {
@@ -146,6 +147,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 #header h1, #header p, #header ul{
         margin:0;
+	font-size:14px;
         padding:0;
         list-style:none;
         line-height:normal;
