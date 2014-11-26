@@ -1,4 +1,31 @@
-var app = angular.module('AGENP', []);
+var app = angular.module('AGENP', [])
+.config(
+	// function($routeProvider, $locationProvider, $navbarProvider) {
+	function($locationProvider) {
+		$locationProvider.html5Mode(true);
+		// angular.extend($navbarProvider.defaults, {activeClass: 'in'});
+		/*$routeProvider.when('/', {
+				templateUrl:    'index.html',
+				controller:     'HomeController'
+    		});
+		$routeProvider.when('/about', {
+			templateUrl:    'about.html',
+			controller:     'AboutController'
+		});
+		$routeProvider.when('/gallery', {
+			templateUrl:    'gallery.html',
+			controller:     'GalleryController'
+		});
+                $routeProvider.when('/demo', {
+                        templateUrl:    'demo.html',
+                        controller:	'DashController'
+		});
+		$routeProvider.otherwise({
+			redirectTo:     '/',
+			controller:     'MainController', 
+		});*/
+	}
+);
 
 app.directive('chart', function() {
     return {
@@ -48,8 +75,19 @@ app.directive('chart', function() {
         }
     };
 });
+app.controller('HomeController', function($scope){
+	return;
+});
 
-app.controller('DashController', function($scope){
+app.controller('GalleryController', function($scope){
+	return;
+});
+
+app.controller('AboutController', function($scope){
+	return;
+});
+
+app.controller('DashController', function($scope, $location){
 	var player,
 	    video,
 	    context,
@@ -57,6 +95,16 @@ app.controller('DashController', function($scope){
 	    audioSeries = [],
 	    maxGraphPoints = 200;
 
+	// Feed the input video
+	$scope.vidID = $location.search()['vidID'];
+
+	if (!$scope.vidID) {
+		$scope.vidID = "st";
+	}
+
+	/*$scope.go = function(path) {
+		$location.path(path);
+	};*/
 
 	/////////////////////////////////////////////
 	//
@@ -315,7 +363,7 @@ app.controller('DashController', function($scope){
 	player.attachView(video);
 	player.setAutoPlay(true);
 
-	var url = "./st/stream.mpd";
+	var url = "./videos/" + $scope.vidID + "/stream.mpd";
 	player.attachSource(url);
 
 	/////////////////////////////////////////////

@@ -1,5 +1,5 @@
 @import url(navi.css);
-@import url(tables.css);
+/* @import url(tables.css); */ /* This one conflicts with chart styles*/
 @import url(forms.css);
 
 @media screen and (min-width: 0px) and (max-width: 1200px) {
@@ -160,7 +160,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
         }
 
 /* ----------------------------------------------BreadCrumb-------------------------------------*/
-
 #breadcrumb{
         padding:30px 0;
         border-top:1px dotted #666;
@@ -177,7 +176,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #breadcrumb ul li.current a{text-decoration:underline;}
 
 /* ----------------------------------------------Gallery-------------------------------------*/
-
 .gallery{
     padding:20px 0 30px 0;
     }

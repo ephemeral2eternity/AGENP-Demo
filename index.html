@@ -41,15 +41,15 @@
 <script src="./app/metrics.js"></script>
 <script src="./agenp.js"></script>
 </head>
-<body id="top" ng-controller="DashController">
+<body id="top">
 <div class="wrapper col1">
   <div id="header">
     <div id="topnav">
       <ul>
-        <li class="last"><a href="about.html">About</a><span>Progress of AGENS Project</span></li>
-        <li><a href="gallery.html">Video</a><span>Available Videos</span></li>
-        <li><a href="demo.html">Demo</a><span>A Video Player Demo</span></li>
-        <li class="active"><a href="index.html">Homepage</a><span>Project Description</span></li>
+        <li><a href="/about.html">About Us</a><span>Members</span></li>
+        <li><a href="/gallery.html">Video</a><span>Available Videos</span></li>
+        <li><a href="/demo.html">Demo</a><span>A Video Player Demo</span></li>
+        <li><a href="/index.html">Homepage</a><span>Project Description</span></li>
       </ul>
     </div>
     <div class="fl_left">
@@ -71,10 +71,14 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<div class="wrapper col4">
+<div class="wrapper col4" ng-controller="HomeController">
   <div id="container">
 	<h1>AGENS Overview</h1>
         <p>In commercial Video-on-Demand (VoD) systems, provisioning thousands of cache servers to serve millions of users with an expanding collection of movies is very common. As the system scales up, system management and control become great challenges. In this project, we propose AGENS --- an AGENt based management and control System for large-scale VoD.  AGENS performs management and control in a large number of processes distributed all over the VoD system, referred to as agents. It inherently overcomes the difficulty of scalability via massive distributed agents. It also specializes agents to handle different types of tasks such as Quality of Experience (QoE) driven control and system management. Specifically, AGENS includes system management and control following aspects: </p>
+	<figure>
+		<img src="" alt="The Framework of AGENS">
+		<figcaption>Figure 1. Framework of AGENS system</figcaption>
+	</figure>
   </div>
 </div>
 <!-- ####################################################################################################### -->

@@ -41,18 +41,18 @@
 <script src="./app/metrics.js"></script>
 <script src="./agenp.js"></script>
 </head>
-<body id="top" ng-controller="DashController">
+<body id="top">
 <div class="wrapper col1">
   <div id="header">
     <div id="topnav">
       <ul>
-        <li class="last"><a href="about.html">About</a><span>Progress of AGENS Project</span></li>
-        <li><a href="gallery.html">Video</a><span>Available Videos</span></li>
-        <li class="active"><a href="demo.html">Demo</a><span>A Video Player Demo</span></li>
-        <li><a href="index.html">Homepage</a><span>Project Description</span></li>
+        <li><a ng-href="/about.html">About Us</a><span>Members</span></li>
+        <li><a ng-href="/gallery.html">Video</a><span>Available Videos</span></li>
+        <li><a ng-href="/demo.html">Demo</a><span>A Video Player Demo</span></li>
+        <li><a ng-href="/index.html">Homepage</a><span>Project Description</span></li>
       </ul>
-    </div>
-    <div class="fl_left">
+   </div> 
+   <div class="fl_left">
       <h1><a href="#">AGENS</a></h1>
       <p>An Agent-based Management and Control System for Large-Scale VoD Service on Cloud</p>
     </div>
@@ -71,7 +71,7 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<div class="wrapper col2">
+<div class="wrapper col2" ng-controller="DashController">
   <div class="row">
         <p class="fl_left">The Demo page is still under construction .... This is not a final version</p>
 	<div class = "dash-video-player">
