@@ -74,19 +74,27 @@
 <div class="wrapper col4" ng-controller="HomeController">
   <div id="container">
 	<h1 align="center">AGENS Overview</h1>
-        <p>In commercial Video-on-Demand (VoD) systems, provisioning thousands of cache servers to serve millions of users with an expanding collection of movies is very common. As the system scales up, system management and control become great challenges. In this project, we propose AGENS --- an AGENt based management and control System for large-scale VoD.  AGENS performs management and control in a large number of processes distributed all over the VoD system, referred to as agents. It inherently overcomes the difficulty of scalability via massive distributed agents. It also specializes agents to handle different types of tasks such as Quality of Experience (QoE) driven control and system management. Specifically, AGENS includes system management and control following aspects shown in Figure 1.</p>
+	<p>By the end of 2016, 80% to 90% of the Internet traffic will be video traffic. It is not hard to expect that these Internet-scale Video On Demand (VoD) giants including YouTube, Netflix, Youku, etc., will be the main contributors to such a large amount of traffic. Providing a global-wise VoD service spanning over several continents targeting millions to billions users turns nearly every aspect of system management into a great challenge.</p>
+
+<p>In addition, as commercial cloud services, such as Amazon Web Service (AWS), Microsoft Azure, and Google Cloud become more and more popular and well-developed, content providers also realize the value of “elasticity” in Cloud and gradually move their services to commercial Cloud, like Netflix. Unlike the traditional system that generally over-provisioned resources to handle peak requests, IaaS in commercial Cloud allows content providers to quickly deploy and release physical resources according to clients’ need, which can drastically reduce costs for content providers. However, such a change also turns focuses of system management from the original idea of cost reduction to a user oriented object, which is to improve every user’s Quality of Experience. </p>
+
+<p>In the AGENS project, we are interested in identifying aspects in system management and control that will be greatly impacted by the increasing scale of VoD system and the migration of VoD services into commercial cloud. Then, we are particularly interested in showing whether these management issues can benefit from an agent based system with regarding to scalability, autonomy, and satisfaction of individual Quality of Experience (QoE). </p>
+	<h2>Objectives</h2>
+	<ul>
+		<li>Scalability</li>
+<p>The first and foremost goal of deploying agents to manage and control large-scale VoD system is the scalability. Monitoring millions of users and hundreds of thousands of servers will not be achieved on a single server. For specific issues like content placement, resource provisioning, etc. though centralized solution can possibly obtain optimal solution, distributed solutions generally scales and maintains a low communication cost. AGENS system provides an easy platform to test various distributed solutions.</p>
+		<li>Individual Quality of Experience</li>
+<p>Due to the unpredictability of network status, it is difficult to guarantee a certain QoE for an individual user throughout a long streaming session (say 2 hour movie). However, with an agent deployed in a client player, it is feasible to monitor a user's Quality of Experience (QoE) in real-time, which can be a useful feedback in controls like server selection, resource provisioning and content placement. AGENS system deploys client agents in each user’s video player (can be a javascript player in a real system) and monitors individual user’s QoE, which later are used to make controls of the VoD system dynamically.</p>
+		<li>High Availability</li>
+<p>Though Cloud providers are responsible for the availability of physical infrastructure, an instance in the Cloud is just a virtual machine (VM) that share a physical machine (ON) with other VMs. These other VMs can be used for any purpose. For example, as a VoD provider, you could share a PM with be a web server, or a video server, a FTP server or even a computing workstation. Resources such as CPU and bandwidth capacity are not dedicated for these instances. Interferences among VMs dynamically impact how these instances  perform. Therefore, guarantee a high availability of VoD services in such a dynamical environment will be a challenge. In our AGENS system, each agent monitors the health status of a streaming session or a server; agents communicate with each other in a distributed way to check the availability of neighbors; and agents are organized to a connected graph to guarantee the spread of anomaly information, such as server overloading, server failure or connection failure, etc., so appropriate fail-over control can be taken by some agent in charge.</p>
+	</ul>
+	<h2>Brief Description of AGENS system</h2>
+        <p>AGENS is an AGENt based management and control System for large-scale VoD.  AGENS performs management and control in a large number of processes distributed all over the VoD system, referred to as agents. It inherently overcomes the difficulty of scalability via massive distributed agents. It also specializes agents to handle different types of tasks such as Quality of Experience (QoE) driven control and system management. Specifically, AGENS includes system management and control following aspects shown in Figure 1.</p>
 	<figure align="center">
 		<img src="agensImgs/AgensFramework.png" alt="The Framework of AGENS" style="width:800px" align="middle" class="imagecenter">
 		<figcaption>Figure 1. Framework of AGENS system</figcaption>
 	</figure>
 	<p>As it is shown in Figure 1, the AGENS system deploys agents in each server and client to monitor the health status of each server and user. All agents communicate with each other to exchange important information, make group decisions and organize themselves in a way to ensure the reachability of all distributed agents. With monitoring and management modules available, agents can make controls in the system to improve user Quality of Experience (QoE), higher availability of the system, and lower cost of resources, etc.</p>
-	<h2>Objectives</h2>
-	<ul>
-		<li>Improve Quality of Experience for each individual user by adaptively change controls of content caching, resource provisioning and server selection.</li>
-		<li>Reduce the cost of resources by avoid over-provisioning resources.</li>
-		<li>Develop a fully distributed management and control system that adapts to various scales of system dynamically.</li>
-		<li>Improve the availability of VoD services by real-time monitoring and fail-over control.</li>
-	</ul>
   </div>
 </div>
 <!-- ####################################################################################################### -->
